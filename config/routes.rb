@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+
+  # get '/' => 'mushrooms#index'
+  get '/mushrooms' => 'mushrooms#index'
+  get '/mushrooms/new' => 'mushrooms#new'
+  post '/mushrooms' => 'mushrooms#create'
+  get '/mushrooms/:id' => 'mushrooms#show'
+  get '/mushrooms/:id/edit' => 'mushrooms#edit'
+  put '/mushrooms/:id' => 'mushrooms#update'
+  delete '/mushroom/:id' => 'mushrooms#destroy'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

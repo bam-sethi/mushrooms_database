@@ -1,0 +1,17 @@
+<h2>MUSHROOM EDIT</h2>
+
+<form action='/mushrooms/<%= "#{@mushroom.id}" %>' method="post">
+  <label for="mushroom[name]">NAME:</label>
+  <input name="mushroom[name]" value='<%= "#{@mushroom.name}" %>'>
+
+  <label for="mushroom[properties]">PROPERTIES:</label>
+  <input name="mushroom[properties]" value='<%= "#{@mushroom.properties}" %>'>
+
+  <label for="mushroom[image]">IMAGE:</label>
+  <input name="mushroom[image]" value='<%= "#{@mushroom.image}" %>'>
+
+
+  <input type="hidden" name="_method" value="put">
+
+  <input type="submit" value="update">
+</form>

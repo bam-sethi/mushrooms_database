@@ -1,0 +1,17 @@
+<h1>hi shrooms</h1>
+
+<div class="mushrooms">
+<% @mushrooms.each do |mushroom| %>
+  <h2> <%= mushroom.name %></h2> 
+  <p> <%= mushroom.properties %> </p>
+  <img src="<%= mushroom.image %>">
+  <a href="/mushrooms/<%= mushroom.id %>">  <%= mushroom.name %> </a>
+  <a href="/mushrooms/<%= mushroom.id %>/edit"> EDIT</a>
+  <form action="/mushrooms/<%= mushroom.id%>/delete" method="post">
+  <input type="hidden" name="_method" value="delete">`
+  <button>Delete</button>
+
+
+
+  <% end %>
+</div>
