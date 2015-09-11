@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/mushrooms/:id' => 'mushrooms#show'
   get '/mushrooms/:id/edit' => 'mushrooms#edit'
   put '/mushrooms/:id' => 'mushrooms#update'
-  delete '/mushroom/:id' => 'mushrooms#destroy'
+  delete '/mushroom/:id/delete' => 'mushrooms#destroy'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
